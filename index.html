@@ -1,11 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Validation Form</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-    <H1>Hello world</H1>
+    <div class="wrapper">
+  <!-- Form kiri -->
+  <div class="login-container">
+    <form class="login-form">
+      <div class="input-group">
+        <label for="name" class="label">Nama</label>
+        <input type="text" id="name" placeholder="Masukkan nama" required>
+      </div>
+      <span class="message" id="nameMessage"></span>
+
+      <div class="input-group">
+        <label for="nim" class="label">NIM</label>
+        <input type="text" id="nim" placeholder="Masukkan NIM" required>
+      </div>
+      <span class="message" id="nimMessage"></span>
+
+      <div class="input-group">
+        <label for="email" class="label">Email</label>
+        <input type="email" id="email" placeholder="Masukkan email" required>
+      </div>
+      <span class="message" id="emailMessage"></span>
+
+      <!-- Tombol simpan dalam div agar bisa ke kanan -->
+      <div class="button-group">
+        <button id="submitBtn">Simpan</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Tabel kanan -->
+  <div class="table-container">
+    <table id="dataTable">
+      <thead>
+        <tr>
+          <th>Nama</th>
+          <th>NIM</th>
+          <th>Email</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Data diisi oleh JS -->
+      </tbody>
+    </table>
+  </div>
+</div>
+    <script src="script.js"></script>
 </body>
 </html>
